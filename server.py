@@ -51,11 +51,11 @@ def exit_fullscreen(event):
 # Bind the "Escape" key to exit fullscreen
 root.bind('<Escape>', exit_fullscreen)
 
-#text_area = Text(root, height=20, width=50, state='disabled')
-#text_area.pack(side='left', fill='y')
+text_area = Text(root, height=20, width=50, state='disabled')
+text_area.pack(side='left', fill='y')
 
-#scrollbar = Scrollbar(root, command=text_area.yview)
-#scrollbar.pack(side='right', fill='y')
+scrollbar = Scrollbar(root, command=text_area.yview)
+scrollbar.pack(side='right', fill='y')
 
 #text_area['yscrollcommand'] = scrollbar.set
 
