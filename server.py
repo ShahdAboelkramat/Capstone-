@@ -38,6 +38,11 @@ def start_server():
 # GUI Setup for Server
 root=tk.Tk()
 root.title("Server")
+root.geometry('1280x650+0+0')
+root.resizable(False ,  True)
+root.minsize(500,500)
+p1 = PhotoImage(file = 'G:\Capstone\Capstone-\images\cap.png') 
+root.iconphoto(False, p1) 
 
 about = Frame(root, bg="lightblue")  
 about.place(x=0, y=0, relwidth=1, relheight=1)  
@@ -45,11 +50,7 @@ text2 = Label(about, text="shahd", font=("Arial", 20), fg="black")
 text2.place(x=50, y=100)
 
 
-home = Frame(root, bg="lightgreen")
-home.place(x=10, y=50, relwidth=1, relheight=1)
 
-text1 = Label(home, text="Hello", font=("Arial", 20), fg="black")
-text1.place(x=50, y=100)
 
 button_frame = Frame(root, bg="gray")
 button_frame.place(x=0, y=0, relwidth=1)
@@ -58,13 +59,8 @@ button_frame.place(x=0, y=0, relwidth=1)
 start_btn = Button(button_frame, text="Start Server", command=start_server)
 start_btn.pack(side="left", padx=20, pady=20)
 
-abo = Button(button_frame, text="About Us", command=lambda: about.tkraise())
+abo = Button(button_frame, text="About Us",activeforeground='blue',command=lambda: about.tkraise())
 abo.pack(side="left", padx=20, pady=20)
 
 
-home_btn = Button(button_frame, text="Home", command=lambda: home.tkraise())
-home_btn.pack(side="left", padx=20, pady=20)
-
-
-home.tkraise()
 root.mainloop()
